@@ -50,7 +50,19 @@ $(document).ready(function(){
 
      })
 
-
+   /* 
+   *  Callback
+   *  Entendendo ações que começam ao termino de outra
+   */
+   $('.featured-item:nth(1)')
+      .hide(500, function(){
+       // este é o callback
+       console.log( $(this).find('h4').text() + ' esgotado')
+      })
+      .show(500, function(){
+       console.log( $(this).find('h4').text() + ' em estoque')
+      })
+   
 
 
 
