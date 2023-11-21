@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     let destaques = $('#featured') // seletor de id
 
-    console.log(titulos.first());
+    // console.log(titulos.first());
 
     // Configuração de produtos
 
@@ -53,7 +53,7 @@ $(document).ready(function(){
    /* 
    *  Callback
    *  Entendendo ações que começam ao termino de outra
-   */
+  
    $('.featured-item:nth(1)')
       .hide(500, function(){
        // este é o callback
@@ -63,11 +63,35 @@ $(document).ready(function(){
        console.log( $(this).find('h4').text() + ' em estoque')
       })
    
+   
+   * Animações
+   
+  const duracao = 1000 // equivalente a 1 segundo
 
+   $('.featured-item:nth(0)')
+      .hide(duracao)
+      .show(duracao)
+      .fadeOut(duracao)
+      .fadeIn(duracao)
+      .toggle(duracao)
+      .toggle(duracao)
+   */
 
+   $('#form-submit').on('click', function(e){
 
+      e.preventDefault()
 
+      if($('#email').val() != '' ){
+         $('#email').animate({
+            opacity: "toggle",
+            top: "-50"
+         }, 500, function(){
+            console.log($(this).val())
+         })
+      }
+      
 
+   });
 
 
 

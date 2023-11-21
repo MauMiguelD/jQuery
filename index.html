@@ -142,6 +142,41 @@
             </div>
         </div>
 
+        <div class="subscribe-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <div class="line-dec"></div>
+                            <h1>Receba novidades</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-8 offset-md-2">
+                        <div class="main-content">
+                            <p>Insira seus dados abaixo para receber informações atualizadas de nossos produtos</p>
+                            <div class="container">
+                                <form id="subscribe" class="form" action="" method="get">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <fieldset>
+                                                <input name="email" type="text" class="form-control" id="email" value=""
+                                                    placeholder="Seu e-mail...">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <fieldset>
+                                                <button type="submit" id="form-submit" class="button">Inscreva-se</button>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="footer">
             <div class="container">
                 <div class="row ">
@@ -186,6 +221,56 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal trigger button -->
+        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+          Launch
+        </button>
+        
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="contato" class="visually-hidden">
+           
+            <form action="" class="form">
+
+                <div class="mb-3">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome">
+                  <small id="helpNome" class="text-muted">
+                    Digite um nome válido
+                  </small>
+                </div>
+
+            </form>
+
+        </div>
+        
+        <!-- Optional: Place to the bottom of scripts 
+        <script>
+            const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+        
+        </script> -->
+
         
     <script src="./vendor/jquery/jquery-3.7.1.min"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
